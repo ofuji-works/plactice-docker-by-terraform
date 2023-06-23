@@ -26,7 +26,6 @@ resource "docker_container" "mysql" {
   }
   volumes {
     container_path = "/var/lib/mysql"
-    host_path      = "${abspath(path.root)}/data-volume"
     volume_name    = docker_volume.data_volume.name
   }
 }
